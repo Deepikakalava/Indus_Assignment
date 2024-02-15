@@ -1,0 +1,13 @@
+<!-- entries.component.html -->
+<div>
+    <h2>Submitted Entries</h2>
+    
+    <ul>
+      <li *ngFor="let entry of entries">
+        <strong>Name:</strong> {{ entry.name }}<br>
+        <strong>Email:</strong> {{ entry.email }}<br>
+        <strong>Contact:</strong> {{ entry.contact }}<br>
+      </li>
+    </ul>
+  </div>
+  

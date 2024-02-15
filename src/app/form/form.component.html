@@ -1,0 +1,50 @@
+<!-- form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+</head>
+<body>
+    <form (ngSubmit)="submitForm()" #userForm="ngForm">
+        <table>
+            <tr> <label for="name">Name: </label>
+        <td>
+           
+            <div class="input-box">
+                <input type="text" name="name" #name ="ngModel" placeholder="Enter name" [(ngModel)]="user.name" required >
+                <p *ngIf ="name.errors?.['required'] && name.touched">Please Enter your name</p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <label for="email"> Email-Id:</label>
+        <td>
+            
+            <div class="input-box">
+                <input type="email" name="email" #email="ngModel" placeholder="Enter Email-Id" [(ngModel)]="user.email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                <p *ngIf="email.invalid && (email.dirty || email.touched)">Please enter proper Email-Id</p>
+
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <label for="contact">Contact Number: </label>
+        <td>
+            <div class="input-box">
+                <input type="text" name="contact" #contact ="ngModel" placeholder="Enter contact" [(ngModel)]="user.contact" required pattern="[6789][0-9]{9}">
+            </div>
+            <p style="font-weight: bold;text-align: center;"  *ngIf ="contact.errors?.['required'] && contact.touched"> Enter Phone Number</p>
+            <p style="font-weight: bold;text-align: center;"  *ngIf ="contact.errors?.['pattern'] && contact.touched"> Enter valid Phone Number</p>
+
+        </td>
+    </tr>
+        </table>
+
+        <button type="submit" [disabled]="userForm.invalid" class="btn btn-primary" >Submit</button>
+    
+    </form>
+
+</body>
+</html>
