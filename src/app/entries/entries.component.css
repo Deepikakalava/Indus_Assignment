@@ -1,0 +1,38 @@
+
+body{
+    background-color: #f0f0f0;;
+}
+div {
+    margin: 0px;
+}
+
+/* Style the heading */
+h2 {
+    padding: 20px;
+    color: #333;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Style the list items */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Style the strong tags within list items */
+li strong {
+    color: #4CAF50;
+}
+
+/* Add some spacing between list items */
+li:not(:last-child) {
+    margin-bottom: 20px;
+}
