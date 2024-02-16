@@ -7,9 +7,10 @@ import { HeaderComponent } from './header/header.component';
 // app-routing.module.ts
 const routes: Routes = [
   { path: '', component: HeaderComponent, pathMatch: 'full' },
-  {path: 'home',component:HeaderComponent},
   { path: "entries", component: EntriesComponent},
-  {path: "forms",component:FormComponent}
+  {path: "forms",component:FormComponent},
+  {path:"home",component:HeaderComponent}
+ 
 ];
 
 
